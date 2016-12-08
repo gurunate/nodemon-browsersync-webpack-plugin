@@ -18,7 +18,7 @@ $ webpack --watch
 
 ### Basic
 
-Pass [Nodemon options](https://github.com/remy/nodemon/blob/master/doc/requireable.md) and [BrowserSync options](https://browsersync.io/docs/options/) into the plugin.
+Pass [Nodemon options](https://github.com/remy/nodemon/blob/master/doc/requireable.md) and [BrowserSync options](https://browsersync.io/docs/options/) into the plugin in that order.
 
 ```javascript
 const NodemonBrowsersyncPlugin = require('nodemon-browsersync-webpack-plugin');
@@ -47,7 +47,7 @@ module.exports = {
 
 In the example above, Browsersync will wrap your vhost with a _proxy_ URL to view your site.
 
-*NOTE:* For reuse purposes, a `nodemon.json` configuration file is recommended rather than embedding your Nodemon options to the plugin.  Checkout the [sample nodemon.json](https://github.com/remy/nodemon/blob/master/doc/sample-nodemon.md) for further details.
+*NOTE:* For reusabilty, a `nodemon.json` configuration file is recommended rather than embedding Nodemon options in the plugin.  Checkout the [sample nodemon.json](https://github.com/remy/nodemon/blob/master/doc/sample-nodemon.md) for further details.
 
 ## Contributing
 
