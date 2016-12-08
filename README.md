@@ -47,7 +47,11 @@ module.exports = {
 
 In the example above, Browsersync will wrap your vhost with a _proxy_ URL to view your site.
 
-NOTE: a `nodemon.json` configuration file is recommended.  [Sample nodemon.json](https://github.com/remy/nodemon/blob/master/doc/sample-nodemon.md)
+*NOTE:* For reuse purposes, a `nodemon.json` configuration file is recommended rather than embedding your Nodemon options to the plugin.  Checkout the [sample nodemon.json](https://github.com/remy/nodemon/blob/master/doc/sample-nodemon.md) for further details.
+
+## Contributing
+
+Feel free to open issues to propose stuff and participate. Pull requests are also welcome.
 
 ## License
 
