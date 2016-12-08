@@ -1,13 +1,13 @@
-# nodemon-browsersync-webpack-plugin
+# Nodemon Browsersync Webpack Plugin
 A [webpack](https://webpack.github.io/) plugin that starts and reloads [Nodemon](https://nodemon.io/) and [Browsersync](https://www.browsersync.io/).  It is useful when developing web applications that leverage both server-side rendered HTML pages and webpack bundles.
 
-Is based on the [Va1/browser-sync-webpack-plugin](https://github.com/Va1/browser-sync-webpack-plugin)
+Initially based on [Va1/browser-sync-webpack-plugin](https://github.com/Va1/browser-sync-webpack-plugin)
 
 ## Installation
 Install the plugin with npm:
 
 ```shell
-$ npm i -D nodemon-browsersync-webpack-plugin
+$ npm install nodemon-browsersync-webpack-plugin --save-dev
 ```
 
 ## Usage

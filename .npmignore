@@ -1,0 +1,6 @@
+.git
+.idea/
+.gitignore
+npm-debug.log
+.DS_Store
+.eslintrc
