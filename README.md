@@ -9,17 +9,20 @@ Install the plugin with npm:
 ## Basic Usage
 
 
-```
+```javascript
 const NodemonBrowsersyncPlugin = require('nodemon-browsersync-webpack-plugin');
+
 module.exports = {
   entry: './src/js/entry.js',
   output: {
     path: './public/assets',
     filename: 'bundle.js'
   },
-  plugins: [new NodemonBrowsersyncPlugin({
-    proxy: 'localhost:8001'
-  )]
+  plugins: [
+    new NodemonBrowsersyncPlugin({
+      proxy: 'localhost:8001'
+    )
+  ]
 };
 ```
 
