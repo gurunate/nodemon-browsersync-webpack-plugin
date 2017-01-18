@@ -1,9 +1,10 @@
 {
   "name": "nodemon-browsersync-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A webpack plugin that starts and reloads Nodemon and Browsersync.",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,7 +25,11 @@
   "homepage": "https://github.com/gurunate/nodemon-browsersync-webpack-plugin#readme",
   "dependencies": {
     "browsersync": "0.0.1-security",
+    "chalk": "^1.1.3",
     "lodash": "^4.17.2",
     "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.13.1"
   }
 }

@@ -3,6 +3,7 @@
 const _ = require('lodash');
 const browserSync = require('browser-sync');
 const nodemon = require('nodemon');
+const chalk = require('chalk');
 
 module.exports = class {
     constructor(nodemonOptions, browserSyncOptions, pluginOptions) {
@@ -28,13 +29,15 @@ module.exports = class {
     apply(compiler) {
 
         // start nodemon on compile lifecycle
-        compiler.plugin('compile', (params) => {
-            nodemon(this.nodemonOptions).on('start', () => {
-                console.log('[Nodemon] Restarting...');
-                setTimeout(() => {
-                    this.browserSync.reload();
-                }, 500);
-            });
+        compiler.plugin('compile', () => {
+            if (this.isWebpackWatching) {
+                nodemon(this.nodemonOptions).on('start', () => {
+                    console.log(`[${chalk.blue('Nodemon')}] ${chalk.cyan('Restarting...')}`);
+                    setTimeout(() => {
+                        this.browserSync.reload();
+                    }, 500);
+                });
+            }
         });
 
         compiler.plugin('watch-run', (watching, callback) => {
@@ -48,7 +51,7 @@ module.exports = class {
             }
         });
 
-        compiler.plugin('done', (stats) => {
+        compiler.plugin('done', () => {
             if (this.isWebpackWatching) {
                 if (this.isBrowserSyncRunning) {
                     if (this.options.reload) {
